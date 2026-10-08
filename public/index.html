@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hive Mind - Equipment service, coordinated</title>
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Hive Mind coordinates technicians, spare parts and machines across every site on one connected platform.">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="is-intro">
+
+<!-- Logo symbol reused in nav, login and footer -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="hm-logo" viewBox="395 322 465 450">
+    <g stroke-linejoin="round" stroke-width="5" fill="currentColor" stroke="currentColor">
+      <path d="M425 412 L543 343 Q558 337 558 353 L558 540 L515 566 L507 560 L507 470 L424 421 Z"/>
+      <path d="M420 424 L500 463 L507 473 L507 590 L426 654 L416 640 L416 434 Z"/>
+      <path d="M427 662 L505 600 L558 630 L558 740 Q556 756 540 751 L430 684 Q420 672 427 662 Z"/>
+      <path d="M516 580 L688 489 Q695 485 703 489 L742 511 L745 553 L592 630 Q586 632 580 629 L520 596 Q510 588 516 580 Z"/>
+      <path d="M697 352 Q697 340 710 346 L828 412 Q838 421 830 432 L758 500 L742 490 L697 468 Z"/>
+      <path d="M758 508 L832 441 Q840 436 840 448 L840 655 Q840 666 830 662 L758 622 Z"/>
+      <path d="M697 580 L745 553 L745 726 L714 752 Q697 758 697 742 Z"/>
+      <path d="M750 630 L828 668 Q837 674 828 682 L750 727 Z"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ========== INTRO (from hive-mind-intro-final.html, recoloured to bumblebee yellow) ========== -->
+<div class="intro-panel left" id="pl"></div>
+<div class="intro-panel right" id="pr"></div>
+<div class="intro-stage" id="stage" aria-label="Hive Mind" role="img">
+  <svg viewBox="395 322 465 450" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+      <clipPath id="hClip">
+        <path d="M425 412 L543 343 Q558 337 558 353 L558 540 L515 566 L507 560 L507 470 L424 421 Z"/>
+        <path d="M420 424 L500 463 L507 473 L507 590 L426 654 L416 640 L416 434 Z"/>
+        <path d="M427 662 L505 600 L558 630 L558 740 Q556 756 540 751 L430 684 Q420 672 427 662 Z"/>
+        <path d="M516 580 L688 489 Q695 485 703 489 L742 511 L745 553 L592 630 Q586 632 580 629 L520 596 Q510 588 516 580 Z"/>
+        <path d="M697 352 Q697 340 710 346 L828 412 Q838 421 830 432 L758 500 L742 490 L697 468 Z"/>
+        <path d="M758 508 L832 441 Q840 436 840 448 L840 655 Q840 666 830 662 L758 622 Z"/>
+        <path d="M697 580 L745 553 L745 726 L714 752 Q697 758 697 742 Z"/>
+        <path d="M750 630 L828 668 Q837 674 828 682 L750 727 Z"/>
+      </clipPath>
+    </defs>
+    <g stroke-linejoin="round" stroke-width="5">
+      <path class="piece" fill="#B38F00" stroke="#B38F00" d="M425 412 L543 343 Q558 337 558 353 L558 540 L515 566 L507 560 L507 470 L424 421 Z"/>
+      <path class="piece" fill="#FFD60A" stroke="#FFD60A" d="M420 424 L500 463 L507 473 L507 590 L426 654 L416 640 L416 434 Z"/>
+      <path class="piece" fill="#E6BD00" stroke="#E6BD00" d="M427 662 L505 600 L558 630 L558 740 Q556 756 540 751 L430 684 Q420 672 427 662 Z"/>
+      <path class="piece" fill="#FFE766" stroke="#FFE766" d="M516 580 L688 489 Q695 485 703 489 L742 511 L745 553 L592 630 Q586 632 580 629 L520 596 Q510 588 516 580 Z"/>
+      <path class="piece" fill="#F5CC00" stroke="#F5CC00" d="M697 352 Q697 340 710 346 L828 412 Q838 421 830 432 L758 500 L742 490 L697 468 Z"/>
+      <path class="piece" fill="#BF9A00" stroke="#BF9A00" d="M758 508 L832 441 Q840 436 840 448 L840 655 Q840 666 830 662 L758 622 Z"/>
+      <path class="piece" fill="#EDC500" stroke="#EDC500" d="M697 580 L745 553 L745 726 L714 752 Q697 758 697 742 Z"/>
+      <path class="piece" fill="#FFDF3D" stroke="#FFDF3D" d="M750 630 L828 668 Q837 674 828 682 L750 727 Z"/>
+    </g>
+    <g clip-path="url(#hClip)" style="pointer-events:none"><rect id="sweep" x="300" y="300" width="130" height="520" fill="url(#sheen)" opacity="0" transform="skewX(-18)"/></g>
+  </svg>
+</div>
+
+<div id="root"></div>
+<div id="toasts" aria-live="polite"></div>
+<div id="modal-host"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<script src="/js/intro.js"></script>
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

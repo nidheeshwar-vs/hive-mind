@@ -1,0 +1,24 @@
+# One-click deploy on Render: New + > Blueprint > pick this repo.
+# The disk keeps your SQLite database + uploads between deploys (requires a paid instance).
+# For a free demo, delete the "disk" block and the DATA_DIR variable: data then resets on each restart and re-seeds itself.
+services:
+  - type: web
+    name: hive-mind
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: JWT_SECRET
+        generateValue: true
+      - key: IOT_API_KEY
+        generateValue: true
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: hive-data
+      mountPath: /var/data
+      sizeGB: 1

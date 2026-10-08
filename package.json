@@ -1,0 +1,25 @@
+{
+  "name": "hive-mind",
+  "version": "1.0.0",
+  "description": "Hive Mind - Next-generation activity management platform for industrial equipment services",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "seed": "node server/seed.js --reset",
+    "test": "node server/smoke-test.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "qrcode": "^1.5.4"
+  }
+}
